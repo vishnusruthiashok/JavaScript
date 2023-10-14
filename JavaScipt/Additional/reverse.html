@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing a string</title>
+</head>
+<body>
+    <script>
+        let reverseFun=(str)=>{
+            revStr=""
+            for(let i=(str.length-1); i>=0; i--){
+                revStr+=str[i];
+            }
+            return (revStr)
+        }
+        document.write(reverseFun("sruthi"))
+        
+    </script>
+</body>
+</html>

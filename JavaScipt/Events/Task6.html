@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic operation</title>
+</head>
+<body>
+    <label>Enter value 1:</label>
+    <input type="text" id="value1"/>
+    <label>Enter value 2:</label>
+    <input type="text" id="value2"/>
+    <button onclick="performOperation()">Perform action</button>
+    <h5 id="output"></h5>
+    <script>
+        function performOperation(){
+            var data1=Number(document.getElementById("value1").value);
+            var data2=Number(document.getElementById("value2").value);
+            var add=data1+data2;
+            var subtract=data1-data2;
+            var multiply=data1*data2;
+            var divide=data1/data2;
+            var modulus=data1%data2;
+            document.getElementById("output").innerHTML="Add " + add + "<br>" + "Subtract " + subtract + "<br>" + "Multiply " + multiply + "<br>" + "Divide " + divide + "<br>" + "Modulus " + modulus;
+        }
+    </script>
+</body>
+</html>

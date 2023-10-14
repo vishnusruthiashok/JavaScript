@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    Enter your name:<br>
+    <input type="text" id="name"/><br><br>
+    Enter e-mail address:<br>
+    <input type="email" id="eaddress"><br><br>
+    <button onclick="dataStorage()">Submit</button>
+    <h3 id="getvalues"></h3>
+    <script>
+        function dataStorage(){
+            var name=document.getElementById("name").value
+            var eaddress=document.getElementById("eaddress").value
+            localStorage.setItem("name",name);
+            localStorage.setItem("eaddress",eaddress);
+            document.getElementById("getvalues").innerHTML="Name: "+name+'<br>'+"Email: "+eaddress;
+        }
+    </script>
+</body>
+</html>

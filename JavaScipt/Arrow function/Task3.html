@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrFun=(action,val1,val2)=>{
+            if(action=="add"){
+                return (val1+val2)
+            }
+            else if(action=="sub"){
+                return (val1-val2)
+            }
+            else if(action=="mul"){
+                return (val1*val2)
+            }
+            else if(action=="div"){
+                return (val1/val2)
+            }
+            else{
+                return ("Invalid values")
+            }
+        }
+        console.log(arrFun("add",10,5))
+    </script>
+</body>
+</html>

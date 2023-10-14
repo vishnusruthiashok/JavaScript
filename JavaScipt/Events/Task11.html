@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password creation</title>
+</head>
+<body>
+    <h1>Password Creation</h1>
+    <label for="">Username:</label>
+    <input type="text" id="inputVal"/><br><br>
+    <label for="">Date of Birth</label>
+    <input type="date" id="yearVal"/>
+    <h4 id="passwd"></h4>
+    <input type="button" onclick="passwordCreation()" value="Create Password">
+    <script>
+        function passwordCreation(){
+            var username=document.getElementById("inputVal").value 
+            var userName=username.slice(0,4)
+            var dob=document.getElementById("yearVal").value 
+            var dobyear=dob.slice(0,4)
+            var createPass="Your Password is "+userName+dobyear
+            document.getElementById("passwd").innerHTML=createPass
+        }
+    </script>
+</body>
+</html>

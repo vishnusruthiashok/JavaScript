@@ -1,0 +1,16 @@
+function create(){
+    var div1=document.createElement("div")
+    var heading=document.createElement("h1")
+    var text=document.createTextNode("Login Page")
+    var box=document.createElement("input")
+    var div2=document.createElement("div")
+    var clickbtn=document.createElement("button")
+    var clickbtntext=document.createTextNode("Click")
+    heading.appendChild(text)
+    div1.appendChild(heading)
+    document.body.appendChild(div1)
+    div1.appendChild(box)
+    div2.appendChild(clickbtn)
+    document.body.appendChild(div2)
+    clickbtn.appendChild(clickbtntext)
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping</title>
+</head>
+<body>
+    <script>
+        // Swapping with temp variable
+        let a=10, b=5, temp;
+        console.log("a="+a)
+        console.log("b="+b)
+        temp=a, a=b, b=temp
+        console.log("Swapped value of a is "+a)
+        console.log("Swapped value of b is "+b)
+
+        // Swapping without temp variable
+        let m=15, n=5;
+        m=m+n;
+        n=m-n;
+        m=m-n;
+        console.log(m);
+        console.log(n);        
+
+
+    </script>
+</body>
+</html>

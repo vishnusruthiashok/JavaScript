@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Add to cart</title>
+    <script>
+        function addBtn(){
+            document.getElementById("addButton");
+            var getitem=document.getElementById("displayinput").value;
+            var listitem=document.getElementById("displayitem");
+            var list=document.createElement("li");
+            list.textContent=getitem;
+            listitem.appendChild(list);
+            document.getElementById("displayinput").value='';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="mb-5 mt-5">Add to Cart</h1>
+                <input id="displayinput" type="text"/>
+                <button id="addButton" type="button" onclick="addBtn()" class="btn btn-primary">Add</button>
+                <h5 class="mt-5">My Cart Items</h5>
+                <ul id="displayitem" type="none"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

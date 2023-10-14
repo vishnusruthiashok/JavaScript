@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User name validation</title>
+</head>
+<body>
+    <h1>User name validation</h1>
+    <label>Username</label>
+    <input type="text" id="getuname">
+    <input type="button" onclick="unameValidation()" value="Submit">
+    <script>
+        function unameValidation(){
+            var uname=document.getElementById("getuname").value;
+            var pattern=/^[a-zA-Z]+$/;
+            if(pattern.test(uname)){
+                alert("Username is valid!")
+            }
+            else{
+                alert("Username is invalid! Enter a valid username.")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Emailid</th>
+                <th>Phoneno</th>
+                <th>Password</th>
+                <th>AddressLine1</th>
+                <th>AddressLine2</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Pincode</th>
+            </tr>
+        </thead>
+        <tbody id="givenvalue"></tbody>
+    </table>
+    <script>
+        const inputdata=[{
+            firstname:"Sruthi",
+            lastname:"Ashok",
+            emailid:"vishnusruthi338@gmail.com",
+            phoneno:9876543210,
+            password:"sruthi4999",
+            address:{
+                AddressLine1:"R G Street",
+                Addressline2:"Sukrawarpet",
+                city:"Coimbatore",
+                state:"Tamilnadu",
+                country:"India",
+                pincode:641001
+            }
+        }]
+        const givendata=document.getElementById("givenvalue");
+        var output=""
+        inputdata.map((key,value)=>{
+            output+=`<tr><td>`+key.firstname+`</td><td>`+key.lastname+`</td><td>`+key.emailid+`</td><td>`+key.phoneno+`</td><td>`+key.password+`</td><td>`+key.address.AddressLine1+`</td><td>`+key.address.Addressline2+`</td><td>`+key.address.city+`</td><td>`+key.address.state+`</td><td>`+key.address.country+`</td><td>`+key.address.pincode+`</td></tr>`
+        })
+        givendata.innerHTML=output
+    </script>
+</body>
+</html>

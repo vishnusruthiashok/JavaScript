@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <input type="text" id="inputVal"/>
+    <input type="button" onclick="fun1()" value="Click"/>
+    <select id="selectVal" onclick="fun2()"></select>
+    <script>
+        function fun1(){
+            var displayVals = document.getElementById("inputVal").value
+            for (let i=1; i<=displayVals; i++){
+                document.getElementById("selectVal").innerHTML+="<option>"+i+"</option>"
+            }
+        }
+        function fun2(){
+            let x=document.getElementById("selectVal").value;
+            for(j=1; j<=x; j++){
+                let val1=prompt("Enter username");
+                alert(val1)
+                let val2=prompt("Enter password");
+                alert(val2)
+            }
+        }
+    </script>
+</body>
+</html>

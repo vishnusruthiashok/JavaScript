@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+</head>
+<body>
+    <h1>Password validation</h1>
+    <label>Password</label>
+    <input type="password" id="getpass">
+    <input type="button" onclick="passValidation()" value="Submit">
+    <p>(Use a-z, A-Z, 0-9 and special characters)</p>
+    <script>
+        function passValidation(){
+            var pass=document.getElementById("getpass").value;
+            var pattern=/[a-zA-Z0-9]+\W+$/;
+            if(pattern.test(pass)){
+                alert("Password is valid!")
+            }
+            else{
+                alert("Password is invalid!.")
+            }
+        }
+    </script>
+</body>
+</html>

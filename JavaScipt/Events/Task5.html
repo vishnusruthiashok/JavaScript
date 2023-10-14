@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <label>Enter value 1:</label>
+    <input type="text" id="value1"/>
+    <label>Enter value 2:</label>
+    <input type="text" id="value2"/>
+    <button onclick="nullOrNot()">Validate</button>
+    <script>
+        function nullOrNot(){
+            var data1=document.getElementById("value1").value
+            var data2=document.getElementById("value2").value
+            if((data1==="")||(data2==="")){
+                alert("One of your data is empty, kindly fill it and try again")
+            }
+            else{
+                alert("Data's are correct")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Select Date</label>
+    <input type="date" id="dateVal"/>
+    <input type="button" value="Click" onclick="getAfterDate()"><br><br>
+    <label for="">After 5 days:</label><br>
+    <input type="text" id="aftDate"/><br><br>
+    <label for="">Before 5 days:</label><br>
+    <input type="text" id="befDate"/>
+    <script>
+        function getAfterDate(){
+            var adate=new Date(document.getElementById("dateVal").value)
+            var bdate=new Date(document.getElementById("dateVal").value)
+            adate.setDate(adate.getDate()+5)
+            var d=adate.getDate()
+            var m=adate.getMonth()
+            var y=adate.getFullYear()
+            var disAfDate=d+"/"+(m+1)+"/"+y
+            document.getElementById("aftDate").value=disAfDate
+            bdate.setDate(bdate.getDate()-5)
+            var d=bdate.getDate()
+            var m=bdate.getMonth()
+            var y=bdate.getFullYear()
+            var disBfDate=d+"/"+(m+1)+"/"+y
+            document.getElementById("befDate").value=disBfDate
+        } 
+    </script>
+</body>
+</html>

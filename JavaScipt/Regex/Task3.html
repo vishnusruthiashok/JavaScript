@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Validation</title>
+</head>
+<body>
+    <h1>Mobile Number Validation</h1>
+    <label>Mobile Number :</label>
+    <input type="text" id="getNum">
+    <input type="button" onclick="mobNumValidation()" value="Submit">
+    <h5>(Enter 10 digit number)</h5>
+    <script>
+        function mobNumValidation(){
+            var num=document.getElementById("getNum").value;
+            var pattern=/^[0-9]+$/;
+            var findLen=num.length;
+            if((pattern.test(num))&&(findLen==10)){
+                alert("Mobile number is valid!")
+            }
+            else{
+                alert("Invalid mobile number. Please check!")
+            }
+        }
+    </script>
+</body>
+</html>
